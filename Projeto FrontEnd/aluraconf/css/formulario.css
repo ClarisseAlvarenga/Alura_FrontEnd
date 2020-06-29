@@ -1,0 +1,35 @@
+.dados-pessoais input {
+	width:96%;
+	border: 1px solid #000;
+	border-radius:5px;
+	box-shadow: 1px 1px 10px #48A3A6;
+	padding:.7em;
+}
+
+.dados-pessoais label{
+	font-weight:bold;
+	font-size:20px;
+	margin-bottom:10px;
+
+}
+
+.dados-pessoais{
+	display:block;
+	
+}
+
+.formulario{
+	margin-top:32px;
+}
+
+.formulario .titulo{
+	text-transform: uppercase;
+	color:#Ef7247;
+	font-size: 2em;
+	text-align:center;
+}
+
+
+.campo{
+	margin-bottom:16px;
+}

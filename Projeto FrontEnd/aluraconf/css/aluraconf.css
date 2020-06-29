@@ -1,0 +1,22 @@
+/*aluraconf.css*/
+
+nav .menu-principal{
+	text-transform:uppercase;
+	font-color:white;
+	font-size:1em;
+	border-radius:20%;
+	box-sizing:border-box;
+	padding:1em;
+	background-color:transparent;
+	display:inline-block;
+	vertical-align:center;
+	float:center;
+}
+
+nav .menu-principal:hover,
+nav .menu-principal:focus{
+	transition: 1s;
+	background-color:#46989D;
+
+	}
+

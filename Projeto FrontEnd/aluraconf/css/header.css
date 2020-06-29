@@ -1,0 +1,86 @@
+/*aluraconf.css*/
+
+.header{
+	background: url(../img/destaque.jpeg) no-repeat;
+	background-size: cover;
+	padding-top:32px;
+	text-align:center;
+}
+.header .main-menu{
+	text-align:center;
+}
+
+.header .main-menu .menu-item{
+	display:inline-block;
+	margin: 0 2px 32px 0;
+	
+}
+
+.header .main-menu .menu-item a{
+	color:white;
+	padding: 16px;
+	background:rgba(0,0,0,0.1);
+	text-transform:uppercase;
+	text-decoration:none;
+	border-radius:4px;
+	transition:background-color 0.5s;
+	
+
+}
+
+.header .main-menu .menu-item a:hover,
+.header .main-menu .menu-item a:focus{
+	
+	background-color:#46989D;
+
+	}
+
+
+.header .jumbotron{
+	padding:0 0 44px 0;
+	text-transform:uppercase;
+}
+.header .jumbotron .principal{
+	text-shadow: 4px 4px 10px black;
+	padding-top: 32px;
+	padding-bottom: 32px;
+}
+
+.header .jumbotron .principal .titulo-principal{
+	color: white;
+	text-decoration: none;
+	font-size: 3em;
+
+	}
+
+.header .jumbotron .principal .data-conf{
+	color:#3ADF00;
+	font-size:2.6em;
+	margin-top:8px;
+	}
+
+
+.header .jumbotron .inscrever .inscricao{
+	display:inline-block;
+	color:white;
+	padding: 25px 50px;
+	background:#48A3A6;
+	/*text-transform:uppercase;*/
+	text-decoration:none;
+	border-radius:8px;
+	transition:background-color 0.5s;
+
+}
+
+.header .jumbotron .inscrever{
+	margin-top:28px;
+}
+
+
+@media (min-width:650px){
+	.header .jumbotron{
+		font-size: 28px;
+
+	}
+	
+}

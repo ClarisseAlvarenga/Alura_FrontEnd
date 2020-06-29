@@ -1,0 +1,143 @@
+observações: 
+*independe de plataforma de desenvolvimento
+*navegadores = uso de internet
+regras de comunicação compatível
+
+protocolo HTTP: conjunto de regras
+
+https://tools.ietf.org/html/rfc2616 (versão 1.1)
+
+http: HyperText Transfer Protocol
+
+navegador: client na dupla client-servidor
+site: server na dupla client-server
+
+DNS: Domain Name System
+
+servidor DNS transforma domínio no endereço IP
+
+porta padrão:
+
+HTTP:80
+HTTPS:443
+FTP:21
+SSH:22
+
+url: protocolo + domínio +caminho para um recurso
+
+recuro é algo concreto que queremos acessar
+
+URL: 
+
+protocolo://domínio:porta/recurso
+
+SMB = server Message Block
+
+
+URI:Uniform Resource Identifier (URL é um tipo de URI, mas não são sinonimos)
+
+
+http: modelo request--- response
+requisições independentes
+
+http: stateless (não mantém informações entre requisições)
+login -> servidor devolve código, e cria sessão. código é utilizado para manter o cliente logado
+
+
+cookie: par chave-valor é onde fica o código usado em outras requisições
+
+JavaScript manipulação de cookies:
+
+function setCookie(name, value, expires, path, domain, secure) {
+        var curCookie = name + "=" + escape(value) +
+        ((expires) ? "; expires=" + expires.toGMTString() : "") +
+        ((path) ? "; path=" + path : "") +
+        ((domain) ? "; domain=" + domain : "") +
+        ((secure) ? "; secure" : "");
+        document.cookie = curCookie;
+}
+
+function getCookie(name) {
+       var dc = document.cookie;
+       var prefix = name + "=";
+       var begin = dc.indexOf("; " + prefix);
+       if (begin == -1) {
+              begin = dc.indexOf(prefix);
+              if (begin != 0) return null;
+       } else
+       begin += 2;
+       var end = document.cookie.indexOf(";", begin);
+       if (end == -1)
+       end = dc.length;
+       return unescape(dc.substring(begin + prefix.length, end));
+}
+
+function deleteCookie(name, path, domain) {
+       if (getCookie(name)) {
+              document.cookie = name + "=" +
+              ((path) ? "; path=" + path : "") +
+              ((domain) ? "; domain=" + domain : "") +
+              "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+              history.go(0);
+       }
+}
+
+
+
+
+
+STATUS CODES:
+
+2XX - Successful responses
+3XX - Redirection messages
+4XX - Client error responses
+5XX - Server error responses (erro desenvolvimento)
+
+
+
+
+
+XML = marcação (semelhante ao html)
+JSON = anotação (chave e valor) semelhante CSS 
+
+
+
+Web Services (Server<->Server)
+REST = REpresentational State Transfer
+
+Padrão arquitetural para comunicações entre aplicações:
+
+Aproveita estrutura do protocolo HTTP
+
+Recursos -> URI
+Operações -> Method (GET, POST, PUT, DELETE,PATCH)
+Cabeçalhos (Accept/Content-Type) especifica a representação (JSON, XML, etc)
+
+Em alguns cabeçalhos do HTTP devemos especificar algum formato. Os formatos são chamados na documentação de MIME types. E na definição do cabeçalho usamos a seguinte estrutura: tipo/subtipo
+
+São tipos conhecidos:
+
+text, image, application, audio e video
+E alguns subtipos:
+
+text -> text/plain, text/html, text/css, text/javascript
+image -> image/gif, image/png, image/jpeg
+audio -> audio/midi, audio/mpeg, audio/webm, audio/ogg, audio/wav
+video -> video/mp4
+application -> application/xml,  application/pdf
+Para conhecer outros formatos aceitos você pode acessar aqui: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types (Multipurpose Internet Mail Extensions)
+
+Recurso (URI) <> Method <> Representação (JSON, SML, HTML)
+
+
+HTTP/2:  GZIP = compressão de conteúdo
+Binário>HPACK >TLS: compressão do cabeçalho
+TLS: Criptografia (padrão do protocolo)
+
+Header:STateful (só muda o necessário no cabeçalho)
+.Server-Push: servidor envia dados sem solicitação expressa do client
+
+
+
+
+
